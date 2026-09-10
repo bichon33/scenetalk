@@ -1,26 +1,26 @@
 "use client";
 
-import { MoonIcon, SunIcon } from "@/components/icons";
-import { useTheme } from "@/lib/theme";
+import type { ReactNode } from "react";
+import { MonitorIcon, MoonIcon, SunIcon } from "@/components/icons";
+import { SegmentedControl } from "@/components/ui/SegmentedControl";
+import { useTheme, type ThemeMode } from "@/lib/theme";
 import { SettingsRow } from "./SettingsRow";
-import { Toggle } from "@/components/ui/Toggle";
+
+const options: { value: ThemeMode; label: ReactNode; "aria-label": string }[] = [
+  { value: "system", label: <MonitorIcon width={13} height={13} />, "aria-label": "시스템 설정 따르기" },
+  { value: "light", label: <SunIcon width={13} height={13} />, "aria-label": "라이트 모드" },
+  { value: "dark", label: <MoonIcon width={13} height={13} />, "aria-label": "다크 모드" },
+];
 
 export function ThemeToggleRow() {
-  const { theme, setTheme } = useTheme();
+  const { mode, theme, setMode } = useTheme();
 
   return (
     <SettingsRow
       icon={theme === "dark" ? <MoonIcon /> : <SunIcon />}
-      title="다크 모드"
-      subtitle="어두운 테마로 화면을 표시해요"
-      trailing={
-        <Toggle
-          key={theme}
-          defaultChecked={theme === "dark"}
-          onChange={(checked) => setTheme(checked ? "dark" : "light")}
-          aria-label="다크 모드"
-        />
-      }
+      title="테마"
+      subtitle="시스템 설정을 따르거나 라이트/다크를 직접 선택할 수 있어요"
+      trailing={<SegmentedControl value={mode} onChange={setMode} options={options} />}
     />
   );
 }
