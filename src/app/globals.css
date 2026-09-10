@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+/*
+ * Design tokens distilled from the gray_ver / light_ver HTML mockups
+ * (home, room list, report, settings). The mockups used slightly
+ * different alpha values per screen for the same visual role
+ * (surface / border / hover) — unified here into one scale so every
+ * screen shares the same system.
+ */
+:root {
+  --bg: #f7f5f2;
+  --ink: #2b2926;
+  --ink-dim: #6e6a64;
+  --muted: #b5afa6;
+
+  --accent: #a8a39c;
+  --accent-line: #6b6862;
+  --accent-dim: rgba(168, 163, 156, 0.14);
+
+  --hairline: rgba(0, 0, 0, 0.1);
+  --surface-1: rgba(0, 0, 0, 0.035);
+  --surface-2: rgba(0, 0, 0, 0.045);
+  --surface-3: rgba(0, 0, 0, 0.065);
+  --border-soft: rgba(0, 0, 0, 0.08);
+  --border-mid: rgba(0, 0, 0, 0.12);
+  --border-strong: rgba(0, 0, 0, 0.14);
+
+  --danger: #c77070;
+  --danger-bg: rgba(122, 46, 46, 0.16);
+
+  --shadow-brand: 0 20px 40px -8px rgba(0, 0, 0, 0.35);
+}
+
+[data-theme="dark"] {
+  --bg: #12131c;
+  --ink: #f2ece0;
+  --ink-dim: #9aa0ad;
+  --muted: #4b5063;
+
+  --accent: #a8a39c;
+  --accent-line: #6b6862;
+  --accent-dim: rgba(168, 163, 156, 0.16);
+
+  --hairline: rgba(242, 236, 224, 0.09);
+  --surface-1: rgba(242, 236, 224, 0.035);
+  --surface-2: rgba(242, 236, 224, 0.045);
+  --surface-3: rgba(242, 236, 224, 0.065);
+  --border-soft: rgba(242, 236, 224, 0.08);
+  --border-mid: rgba(242, 236, 224, 0.12);
+  --border-strong: rgba(242, 236, 224, 0.14);
+
+  --danger: #c77070;
+  --danger-bg: rgba(122, 46, 46, 0.22);
+
+  --shadow-brand: 0 20px 40px -8px rgba(0, 0, 0, 0.6);
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-ink: var(--ink);
+  --color-ink-dim: var(--ink-dim);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-line: var(--accent-line);
+  --color-hairline: var(--hairline);
+  --color-danger: var(--danger);
+  --font-sans: var(--font-inter);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Subtle film-grain texture used behind the home screen hero. */
+.bg-grain {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-rise-in {
+  animation: rise-in 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
