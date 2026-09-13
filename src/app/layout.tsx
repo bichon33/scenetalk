@@ -11,10 +11,10 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "SceneTalk",
+  title: "Scenunion",
   description: "More than a movie, it's a conversation.",
   icons: {
-    icon: "/brand/scenetalk-mark.png",
+    icon: "/brand/scenunion-mark.jpg",
   },
 };
 

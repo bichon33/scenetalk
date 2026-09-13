@@ -1,4 +1,4 @@
-# SceneTalk
+# Scenunion
 
 "More than a movie, it's a conversation." — a movie-chat app. Next.js (App
 Router) + TypeScript + Tailwind CSS v4, scaffolded from the `home` /

@@ -14,10 +14,10 @@ export default function HomePage() {
       <div className="flex min-h-screen flex-col items-center justify-center gap-8 px-6 py-24">
         <div className="animate-rise-in w-full max-w-[340px]">
           <Image
-            src="/brand/scenetalk-logo.png"
-            alt="SceneTalk — More than a movie, it's a conversation."
-            width={1238}
-            height={1028}
+            src="/brand/scenunion-logo.jpg"
+            alt="Scenunion — More than a movie, it's a conversation."
+            width={1024}
+            height={1024}
             priority
             className="h-auto w-full rounded-[26px] drop-shadow-[0_20px_40px_rgba(0,0,0,0.35)]"
           />

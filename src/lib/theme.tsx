@@ -14,7 +14,7 @@ export type ThemeMode = "system" | "light" | "dark";
 /** The resolved, visual theme — what `data-theme` on <html> is set to. */
 export type Theme = "light" | "dark";
 
-export const THEME_STORAGE_KEY = "scenetalk-theme";
+export const THEME_STORAGE_KEY = "scenunion-theme";
 
 const DARK_MEDIA_QUERY = "(prefers-color-scheme: dark)";
 

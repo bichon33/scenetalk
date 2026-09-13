@@ -12,10 +12,10 @@ export default function ReportPage() {
 
       <div className="flex flex-col items-center border-b border-[var(--hairline)] bg-[radial-gradient(ellipse_65%_55%_at_50%_15%,var(--accent-dim),transparent_70%)] px-8 pt-10 pb-8 text-center">
         <Image
-          src="/brand/scenetalk-mark.png"
+          src="/brand/scenunion-mark.jpg"
           alt=""
-          width={791}
-          height={613}
+          width={700}
+          height={458}
           className="mb-4.5 h-auto w-[140px] drop-shadow-[0_16px_26px_rgba(0,0,0,0.4)]"
         />
         <p className="mb-2 text-[0.78rem] text-[var(--ink-dim)]">{personaReport.eyebrow}</p>
