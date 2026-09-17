@@ -68,7 +68,7 @@ export default function SettingsPage() {
       </div>
 
       <p className="px-5.5 pt-5 pb-10 text-center text-[0.74rem] text-[var(--ink-dim)]">
-        SceneTalk v0.1 (가안)
+        Scenunion v0.1 (가안)
       </p>
     </AppFrame>
   );

@@ -1,4 +1,4 @@
-# SceneTalk
+# Scenunion
 
 "More than a movie, it's a conversation." — a movie-chat app. Next.js (App
 Router) + TypeScript + Tailwind CSS v4, scaffolded from the `home` /
@@ -42,9 +42,11 @@ The home screen is a full-bleed centered layout (menu → room list / report /
 settings), matching the mockups; the other three screens share a 460px
 mobile-width `AppFrame` with a back-button header, also per the mockups.
 
-Dark mode is wired to a real toggle in Settings (`화면 → 다크 모드`) backed by
-`localStorage` + system preference, even though the mockups only showed two
-static light/gray variants — the actual product needs a live switch.
+The mockups only showed two static light/gray variants, but the product
+needs a real switch: `화면 → 테마` in Settings is a 3-way control
+(시스템 설정 / 라이트 / 다크). "시스템 설정" follows `prefers-color-scheme` live
+(no reload needed if the OS theme changes mid-session); picking 라이트 or
+다크 pins it and persists to `localStorage`. See `src/lib/theme.tsx`.
 
 ## Notes on the source mockups
 

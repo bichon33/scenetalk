@@ -10,11 +10,27 @@ const inter = Inter({
   weight: ["400", "500", "600", "700"],
 });
 
+const title = "Scenunion";
+const description = "More than a movie, it's a conversation.";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://scenunion-ko78gr-5090.vercel.app";
+
 export const metadata: Metadata = {
-  title: "SceneTalk",
-  description: "More than a movie, it's a conversation.",
+  metadataBase: new URL(siteUrl),
+  title,
+  description,
   icons: {
-    icon: "/brand/scenetalk-mark.png",
+    icon: "/brand/scenunion-mark.svg",
+  },
+  openGraph: {
+    title,
+    description,
+    siteName: title,
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title,
+    description,
   },
 };
 
