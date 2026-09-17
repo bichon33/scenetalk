@@ -15,8 +15,8 @@ export default function HomePage() {
         <Image
           src="/brand/scenunion-logo.png"
           alt="Scenunion — More than a movie, it's a conversation."
-          width={726}
-          height={820}
+          width={746}
+          height={791}
           priority
           className="animate-rise-in w-full max-w-[220px]"
         />
