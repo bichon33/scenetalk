@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { LogoMark } from "@/components/brand/LogoMark";
 import { AppFrame } from "@/components/layout/AppFrame";
 import { ScreenHeader } from "@/components/layout/ScreenHeader";
 import { TypeCard } from "@/components/report/TypeCard";
@@ -11,13 +11,7 @@ export default function ReportPage() {
       <ScreenHeader title="취향분석 보고서" backHref="/" />
 
       <div className="flex flex-col items-center border-b border-[var(--hairline)] bg-[radial-gradient(ellipse_65%_55%_at_50%_15%,var(--accent-dim),transparent_70%)] px-8 pt-10 pb-8 text-center">
-        <Image
-          src="/brand/scenunion-mark.jpg"
-          alt=""
-          width={700}
-          height={458}
-          className="mb-4.5 h-auto w-[140px] drop-shadow-[0_16px_26px_rgba(0,0,0,0.4)]"
-        />
+        <LogoMark size={48} className="mb-4 text-[var(--ink)]" />
         <p className="mb-2 text-[0.78rem] text-[var(--ink-dim)]">{personaReport.eyebrow}</p>
         <p className="text-[1.7rem] font-bold tracking-tight text-[var(--ink)]">
           {personaReport.personaName}

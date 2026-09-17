@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { LogoMark } from "@/components/brand/LogoMark";
 import { MenuDropdown } from "@/components/home/MenuDropdown";
 import { PinnedRoomChip } from "@/components/home/PinnedRoomChip";
 import { SearchBox } from "@/components/ui/SearchBox";
@@ -12,15 +12,14 @@ export default function HomePage() {
       <MenuDropdown />
 
       <div className="flex min-h-screen flex-col items-center justify-center gap-8 px-6 py-24">
-        <div className="animate-rise-in w-full max-w-[340px]">
-          <Image
-            src="/brand/scenunion-logo.jpg"
-            alt="Scenunion — More than a movie, it's a conversation."
-            width={1024}
-            height={1024}
-            priority
-            className="h-auto w-full rounded-[26px] drop-shadow-[0_20px_40px_rgba(0,0,0,0.35)]"
-          />
+        <div className="animate-rise-in flex flex-col items-center gap-2">
+          <div className="flex items-center gap-2.5 text-[var(--ink)]">
+            <LogoMark size={30} />
+            <span className="text-[1.4rem] font-semibold tracking-tight">Scenunion</span>
+          </div>
+          <p className="text-[0.72rem] text-[var(--ink-dim)]">
+            More than a movie, it&apos;s a conversation.
+          </p>
         </div>
 
         <div className="animate-rise-in w-full max-w-[620px]" style={{ animationDelay: "0.15s" }}>

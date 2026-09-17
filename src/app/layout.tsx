@@ -10,11 +10,25 @@ const inter = Inter({
   weight: ["400", "500", "600", "700"],
 });
 
+const title = "Scenunion";
+const description = "More than a movie, it's a conversation.";
+
 export const metadata: Metadata = {
-  title: "Scenunion",
-  description: "More than a movie, it's a conversation.",
+  title,
+  description,
   icons: {
-    icon: "/brand/scenunion-mark.jpg",
+    icon: "/brand/scenunion-mark.svg",
+  },
+  openGraph: {
+    title,
+    description,
+    siteName: title,
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title,
+    description,
   },
 };
 
