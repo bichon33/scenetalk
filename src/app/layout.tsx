@@ -12,8 +12,10 @@ const inter = Inter({
 
 const title = "Scenunion";
 const description = "More than a movie, it's a conversation.";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://scenunion-ko78gr-5090.vercel.app";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title,
   description,
   icons: {
