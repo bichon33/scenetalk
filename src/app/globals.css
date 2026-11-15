@@ -103,3 +103,22 @@ body {
 .animate-rise-in {
   animation: rise-in 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
+
+/*
+ * Theme-only visibility, driven by the `data-theme` attribute (set
+ * before paint by the init script — see lib/theme.tsx) rather than a
+ * JS check, so there's no flash of the wrong-theme asset. Used for
+ * raster logo variants that can't just swap color via currentColor.
+ */
+.theme-light-only {
+  display: block;
+}
+.theme-dark-only {
+  display: none;
+}
+[data-theme="dark"] .theme-light-only {
+  display: none;
+}
+[data-theme="dark"] .theme-dark-only {
+  display: block;
+}
