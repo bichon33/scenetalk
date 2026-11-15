@@ -18,7 +18,15 @@ export default function HomePage() {
           width={746}
           height={791}
           priority
-          className="animate-rise-in w-full max-w-[220px]"
+          className="theme-light-only animate-rise-in w-full max-w-[220px]"
+        />
+        <Image
+          src="/brand/scenunion-logo-dark.png"
+          alt="Scenunion — More than a movie, it's a conversation."
+          width={900}
+          height={744}
+          priority
+          className="theme-dark-only animate-rise-in w-full max-w-[220px]"
         />
 
         <div className="animate-rise-in w-full max-w-[620px]" style={{ animationDelay: "0.15s" }}>
