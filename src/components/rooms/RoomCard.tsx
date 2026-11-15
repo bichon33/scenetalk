@@ -8,7 +8,7 @@ export function RoomCard({ room }: { room: Room }) {
       href={`/rooms/${room.id}`}
       className="flex items-center gap-3.5 rounded-2xl border border-[var(--border-soft)] bg-[var(--surface-1)] p-3.5 transition-colors hover:border-[var(--accent)]/30 hover:bg-[var(--surface-3)]"
     >
-      <span className="flex h-[42px] w-[42px] shrink-0 items-center justify-center rounded-[10px] bg-[#22222D]">
+      <span className="flex h-[42px] w-[42px] shrink-0 items-center justify-center rounded-[10px] bg-[var(--thumb-bg)]">
         <FilmDotIcon className="text-[var(--accent-line)]" />
       </span>
       <span className="min-w-0 flex-1">

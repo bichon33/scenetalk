@@ -14,9 +14,9 @@ export const pinnedRooms: Room[] = [
 ];
 
 export const rooms: Room[] = [
-  { id: "spiderman-no-way-home", title: "스파이더맨: 노 웨이 홈", genre: "액션 · SF", lastActiveAt: "2026.09.06" },
-  { id: "odyssey", title: "오디세이", genre: "모험 · 드라마", lastActiveAt: "2026.09.02" },
-  { id: "whiplash", title: "위플래쉬", genre: "드라마 · 음악", lastActiveAt: "2026.07.10" },
+  { id: "spiderman-no-way-home", title: "스파이더맨: 노 웨이 홈", genre: "액션 · SF", lastActiveAt: "2026.09.06", watchStatus: "watched" },
+  { id: "odyssey", title: "오디세이", genre: "모험 · 드라마", lastActiveAt: "2026.09.02", watchStatus: "unsure" },
+  { id: "whiplash", title: "위플래쉬", genre: "드라마 · 음악", lastActiveAt: "2026.07.10", watchStatus: "unwatched" },
 ];
 
 export const personaReport: PersonaReport = {
