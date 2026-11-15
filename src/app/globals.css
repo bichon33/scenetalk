@@ -29,6 +29,7 @@
   --danger-bg: rgba(122, 46, 46, 0.16);
 
   --shadow-brand: 0 20px 40px -8px rgba(0, 0, 0, 0.35);
+  --thumb-bg: #efedea;
 }
 
 [data-theme="dark"] {
@@ -53,6 +54,7 @@
   --danger-bg: rgba(122, 46, 46, 0.22);
 
   --shadow-brand: 0 20px 40px -8px rgba(0, 0, 0, 0.6);
+  --thumb-bg: #22222d;
 }
 
 @theme inline {

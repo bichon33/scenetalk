@@ -1,9 +1,12 @@
+export type RoomWatchStatus = "watched" | "unwatched" | "unsure";
+
 export type Room = {
   id: string;
   title: string;
   genre: string;
   lastActiveAt: string; // "YYYY.MM.DD"
   pinned?: boolean;
+  watchStatus?: RoomWatchStatus;
 };
 
 export type PersonaType = {

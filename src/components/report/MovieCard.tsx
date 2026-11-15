@@ -4,7 +4,7 @@ import type { PersonaMovie } from "@/lib/types";
 export function MovieCard({ movie }: { movie: PersonaMovie }) {
   return (
     <div className="mb-2.5 flex items-center gap-3.5 rounded-2xl border border-[var(--border-soft)] bg-[var(--surface-1)] p-3.5 last:mb-0">
-      <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-[10px] bg-[#22222D]">
+      <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-[10px] bg-[var(--thumb-bg)]">
         <FilmDotIcon width={15} height={15} className="text-[var(--accent-line)]" />
       </span>
       <span className="min-w-0 flex-1">

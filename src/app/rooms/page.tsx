@@ -1,23 +1,15 @@
 import { AppFrame } from "@/components/layout/AppFrame";
 import { ScreenHeader } from "@/components/layout/ScreenHeader";
-import { RoomCard } from "@/components/rooms/RoomCard";
-import { SearchBox } from "@/components/ui/SearchBox";
-import { rooms } from "@/lib/mock-data";
+import { RoomListClient } from "@/components/rooms/RoomListClient";
+import { getRooms } from "@/lib/data/rooms";
 
-export default function RoomsPage() {
+export default async function RoomsPage() {
+  const rooms = await getRooms();
+
   return (
     <AppFrame>
       <ScreenHeader title="방 목록" backHref="/" />
-
-      <div className="px-5 pt-4 pb-1.5">
-        <SearchBox name="query" placeholder="영화 제목으로 검색 (예: 인터스텔라)" />
-      </div>
-
-      <div className="flex flex-1 flex-col gap-2.5 overflow-y-auto px-5 pt-2 pb-5">
-        {rooms.map((room) => (
-          <RoomCard key={room.id} room={room} />
-        ))}
-      </div>
+      <RoomListClient rooms={rooms} />
     </AppFrame>
   );
 }
